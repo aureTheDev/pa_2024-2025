@@ -1,0 +1,101 @@
+.headerContainer {
+  width: 100%;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+.topBar {
+  background-color: #5cc3b3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  width: 100%;
+  height: 70px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+  margin: 0;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.bottomBar {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+}
+
+.headerLogo {
+  width: 90px;
+  height: 90px;
+  margin-right: 10px;
+}
+
+.logoText {
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+}
+
+.centerSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  padding: 5px;
+  border-radius: 8px;
+  width: 18%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.searchBar {
+  border: none;
+  outline: none;
+  padding: 5px;
+  width: 200px;
+  background: transparent;
+}
+
+.searchBar::placeholder {
+  color: #aaa;
+}
+
+.icon {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.menuIcon {
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+}
+
+.customMenu .ant-menu-item {
+  font-size: 15px;
+  font-weight: bold;
+}

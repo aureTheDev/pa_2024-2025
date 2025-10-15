@@ -1,0 +1,129 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.footerFixed {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.adminHeader {
+  background: #18d4c5;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.headerLogo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.logoText {
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  margin-left: 10px;
+}
+
+.icon {
+  font-size: 22px;
+  color: white;
+  cursor: pointer;
+}
+
+.icon:hover {
+  color: #ffea00;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.mainTitle {
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.userSelectionContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.userSelectionBox {
+  background-color: white;
+  padding: 30px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 400px;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 16px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.userSelectionOptions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.optionLabel {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.userSelectionButton {
+  background-color: #409eff;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 220px;
+}
+
+.userSelectionButton:hover {
+  background-color: #3078c6;
+}

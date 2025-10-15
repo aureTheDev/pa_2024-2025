@@ -1,0 +1,109 @@
+.container {
+  width: 70%;
+  height: 90%;
+  margin: 5rem auto;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.6s ease;
+  background-color: #f9fbfd;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #222;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.icon {
+  margin-right: 8px;
+  color: #0bbdab;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f3f3f3;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: #0bbdab;
+  background-color: #fff;
+  box-shadow: 0 0 4px #0bbdab80;
+}
+
+.textarea {
+  resize: none;
+  height: 350px;
+}
+
+.charCount {
+  text-align: right;
+  margin-top: 5px;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.submitBtn {
+  margin: 2rem auto;
+  width: 15%;
+  background-color: #0bbdab;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submitBtn:hover {
+  background-color: #099e9e;
+  transform: scale(1.02);
+}
+
+.sendIcon {
+  font-size: 1.1rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.icon_back {
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  z-index: 999;
+}

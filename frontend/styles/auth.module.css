@@ -1,0 +1,201 @@
+.layout {
+  position: relative;
+  min-height: 100vh;
+  z-index: 1;
+}
+
+.layout::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/health.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.adminHeader {
+  background: #18d4c5;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.headerLogo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.logoText {
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  margin-left: 10px;
+}
+
+.icon {
+  font-size: 22px;
+  color: white;
+  cursor: pointer;
+}
+
+.icon:hover {
+  color: #ffea00;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.container {
+  width: 500px;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.loginBox {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  text-align: center;
+}
+
+.login-logo {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.loginBox input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.createAccount {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.createAccount a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.createAccount a:hover {
+  text-decoration: underline;
+}
+
+.label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background: #f0f0f0;
+}
+
+.loginButton {
+  width: 100%;
+  padding: 12px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.loginButton:hover {
+  background-color: #357abd;
+}
+
+.changePassword {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.changePassword a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.changePassword a:hover {
+  text-decoration: underline;
+}
+
+
+.notificationBox {
+  padding: 12px 18px; /* Ajusté pour être un peu plus compact */
+  margin-bottom: 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 0.95rem; /* Taille de police légèrement ajustée */
+  border: 1px solid transparent;
+  line-height: 1.5;
+}
+
+.notificationBox.success {
+  background-color: #e6f7f0; /* Fond plus clair */
+  border-color: #b3e0c8; /* Bordure plus claire */
+  color: #0f5132;        /* Texte plus foncé pour contraste */
+}
+
+.notificationBox.error {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  color: #721c24;
+}
+
+.notificationBox.info {
+  background-color: #cce5ff;
+  border-color: #b8daff;
+  color: #004085;
+}
+
+.notificationBox.warning { /* Ajout d'un type warning pour plus de flexibilité */
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+  color: #664d03;
+}

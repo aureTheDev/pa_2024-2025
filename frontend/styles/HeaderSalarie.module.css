@@ -1,0 +1,32 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #5cc3b3;
+  padding: 0, 8rem 2rem;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  height: 80px;
+}
+
+.actions {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.icon {
+  font-size: 22px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  margin-right: 30px;
+}
+
+.icon:hover {
+  color: #f0f0f0;
+}
+
+.headerLogo {
+  width: 120px;
+  height: auto;
+  margin-top: 10px;
+}

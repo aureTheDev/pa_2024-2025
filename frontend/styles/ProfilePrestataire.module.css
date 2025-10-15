@@ -1,0 +1,128 @@
+.body {
+  background-color: #f9fbfd;
+  min-height: 100vh;
+  padding: 40px 20px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.icon_back {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #007b7f;
+}
+
+.profileBox {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  background-color: #eef9f7;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.editBtn,
+.passwordBtn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.editBtn {
+  background-color: #5cc3b3;
+}
+
+.passwordBtn {
+  background-color: #1890ff;
+}
+
+.editForm,
+.passwordChangeBox {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  background-color: #f8fefd;
+}
+
+.editForm label,
+.passwordChangeBox label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+}
+
+.editForm input,
+.passwordChangeBox input {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-top: 4px;
+}
+
+.saveBtn {
+  margin-top: 10px;
+  padding: 10px 14px;
+  background-color: #007b7f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.saveBtn:hover {
+  background-color: #04968c;
+}

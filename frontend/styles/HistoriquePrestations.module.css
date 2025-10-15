@@ -1,0 +1,41 @@
+.layout {
+  background: #f9fbfd;
+  min-height: 100vh;
+}
+
+.content {
+  padding: 50px 30px;
+  width: 70%;
+  margin: 30px auto;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #007b7f;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+.tableWrapper {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  max-width: 1000px;
+  margin: auto;
+}
+
+.icon_back {
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  z-index: 999;
+}

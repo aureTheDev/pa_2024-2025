@@ -1,0 +1,176 @@
+/* VerifyEmail.module.css */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f2f5; /* Un fond neutre */
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 450px; /* Limiter la largeur pour une meilleure lisibilité */
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.instructions, .infoMessageTextPlain { /* Renommé pour éviter conflit avec style de bloc .infoMessage */
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espace entre le champ de saisie et le bouton */
+  margin-bottom: 25px;
+}
+
+.codeInputSingle {
+  padding: 12px 18px;
+  font-size: 20px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  letter-spacing: 0.3em;
+  /* background-image: repeating-linear-gradient(90deg, transparent 0 1ch, #ddd 1ch calc(1ch + 1px), transparent calc(1ch + 1px) 2ch);
+  background-position-x: 0.5ch; */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Ajout background-color à la transition */
+}
+
+.codeInputSingle:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  outline: none;
+}
+
+/* Style pour le champ de saisie quand le code est incorrect */
+.codeInputSingleError {
+  border-color: #dc3545 !important; /* Rouge pour erreur */
+  background-color: #fddede !important; /* Fond légèrement rouge très clair */
+  color: #a52834; /* Texte un peu plus foncé sur fond rouge clair */
+}
+
+.codeInputSingleError:focus {
+  border-color: #dc3545 !important;
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25) !important;
+}
+
+
+.button {
+  background-color: #007bff;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.button:hover:not(:disabled) {
+  background-color: #0056b3;
+  transform: translateY(-1px);
+}
+
+.button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.error {
+  color: #721c24; /* Texte plus foncé pour le message d'erreur */
+  font-size: 15px;
+  margin-bottom: 15px;
+  padding: 10px 15px; /* Un peu plus de padding */
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 6px;
+  text-align: left; /* Aligner le texte à gauche pour une meilleure lisibilité */
+}
+
+.successMessage {
+  color: #155724;
+  font-size: 15px;
+  margin-bottom: 15px;
+  padding: 10px 15px;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  border-radius: 6px;
+  text-align: left;
+}
+
+.infoMessage { /* Style pour les blocs de message d'information */
+  color: #004085;
+  font-size: 15px;
+  margin-bottom: 15px;
+  padding: 10px 15px;
+  background-color: #cce5ff;
+  border: 1px solid #b8daff;
+  border-radius: 6px;
+  text-align: left;
+}
+
+
+.resendContainer {
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+.resendButton {
+  background-color: transparent;
+  color: #007bff;
+  border: 1px solid #007bff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.resendButton:hover:not(:disabled) {
+  background-color: #007bff;
+  color: white;
+}
+
+.resendButton:disabled {
+  color: #6c757d;
+  border-color: #adb5bd;
+  cursor: not-allowed;
+}
+
+.backToLogin {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #555;
+}
+
+.backToLogin a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.backToLogin a:hover {
+  text-decoration: underline;
+}
+
+.loadingInitial {
+  padding: 20px;
+  color: #555;
+}

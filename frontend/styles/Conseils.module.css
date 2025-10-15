@@ -1,0 +1,104 @@
+.page {
+  padding: 4rem 3rem;
+  background-color: #f9fbfd;
+  min-height: 100vh;
+}
+
+.title {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #004c4c;
+  margin-bottom: 3rem;
+}
+
+.flexContainer {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.verticalCard {
+  flex: 0 0 30%;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.4s ease-in-out;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 2rem;
+  flex: 1;
+}
+
+.shrunkGrid {
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  color: #007b7f;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.card ul {
+  padding-left: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.card li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.link {
+  color: #007bff;
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.icon_back {
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  z-index: 999;
+}

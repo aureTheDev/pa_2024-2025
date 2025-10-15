@@ -1,0 +1,106 @@
+.layout {
+  min-height: 100vh;
+  background-color: #f9fbfd;
+}
+
+.content {
+  padding: 50px 30px;
+  max-width: 70%;
+  margin: 30px auto;
+  background-color: #f9fbfd;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #007b7f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.tableWrapper {
+  margin-top: 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.bankForm {
+  margin-top: 40px;
+  padding: 30px;
+  background-color: #ecfdfb;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(92, 195, 179, 0.2);
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.bankFormTitle {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  color: #007b7f;
+}
+
+.bankForm label {
+  font-weight: 500;
+  margin-top: 10px;
+  display: block;
+  color: #333;
+}
+
+.bankForm input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 16px;
+  border-radius: 8px;
+}
+
+.bankForm button {
+  background-color: #5cc3b3;
+  border-color: #5cc3b3;
+  color: white;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+
+.total {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #e6f7f4;
+  border: 1px solid #b3e5dc;
+  border-radius: 12px;
+  text-align: right;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #007b7f;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.icon_back {
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  z-index: 999; 
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

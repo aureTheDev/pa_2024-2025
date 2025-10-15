@@ -1,0 +1,17 @@
+fastapi
+uvicorn
+sqlmodel
+mysql-connector-python
+pymysql
+cryptography
+pyjwt
+email-validator
+python-multipart
+stripe
+python-dotenv
+httpx
+fpdf2
+python-jose
+fpdf
+Pillow
+reportlab 

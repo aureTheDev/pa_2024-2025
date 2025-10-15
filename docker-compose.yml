@@ -1,0 +1,107 @@
+services:
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      - DOMAIN=${DOMAIN}
+    volumes:
+      - ./nginx/certbot/conf:/etc/letsencrypt
+      - ./nginx/certbot/www/:/var/www/certbot/:ro
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - api
+      - frontend
+    networks:
+      - pa-network
+
+  certbot:
+    image: certbot/certbot
+    container_name: certbot
+    environment:
+      - DOMAIN=${DOMAIN}
+    volumes:
+      - ./nginx/certbot/www/:/var/www/certbot/:rw
+      - ./nginx/certbot/conf/:/etc/letsencrypt/:rw
+    networks:
+      - pa-network
+
+  db:
+    image: mysql:latest
+    container_name: db
+    ports:
+      - "3306:3306"
+    env_file: .env
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./db_data:/var/lib/mysql
+    networks:
+      - pa-network
+
+  api:
+    build:
+      context: "."
+      dockerfile: "./docker/api.dockerfile"
+    container_name: api
+    depends_on:
+      - db
+    env_file: .env
+    volumes:
+      - ./uploads:/app/uploads
+    networks:
+      - pa-network
+
+  frontend:
+    container_name: nextjs-app
+    build:
+      context: "."
+      dockerfile: "./docker/next.dockerfile"
+      args:
+        - NEXT_PUBLIC_API_URL_ARG=https://api.${DOMAIN}
+        - NEXT_PUBLIC_STRIPE_PUBLIC_KEY_ARG=${NEXT_PUBLIC_STRIPE_PUBLIC_KEY}
+    env_file: .env
+    networks:
+      - pa-network
+
+  postfix:
+    image: boky/postfix:latest
+    container_name: postfix
+
+    environment:
+      HOSTNAME: ${DOMAIN}
+      DOMAIN: ${DOMAIN}
+
+      SMTPD_TLS_CERT_FILE: /etc/postfix/certs/fullchain.pem
+      SMTPD_TLS_KEY_FILE: /etc/postfix/certs/privkey.pem
+      SMTPD_TLS_SECURITY_LEVEL: may
+      SMTPD_USE_TLS: "yes"
+      SMTP_USE_TLS: "yes"
+      SMTP_TLS_SECURITY_LEVEL: may
+
+      ALLOWED_SENDER_DOMAINS: "${DOMAIN}"
+
+      POSTFIX_message_size_limit: 51200000
+      MAILBOX_SIZE_LIMIT: 0
+
+      # --- Configuration pour que Postfix écoute sur toutes les interfaces ---
+      # Normalement géré par l'image, mais vérifiez sa documentation si besoin.
+
+    ports:
+      - "25:25"    # SMTP
+      - "587:587"  # SMTP Submission (pour les clients mail avec authentification)
+    volumes:
+      # --- Volume pour la file d'attente et la configuration persistante ---
+      - ./postfix_data:/var/spool/postfix
+      - ./nginx/certbot/conf:/etc/letsencrypt:ro
+    networks:
+      - pa-network
+
+volumes:
+  db_data:
+  postfix_data:
+
+networks:
+  pa-network:
+    driver: bridge

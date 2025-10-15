@@ -1,0 +1,56 @@
+.layout {
+  background: #f9fbfd;
+  min-height: 100vh;
+}
+
+.content {
+  padding: 50px 30px;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #007b7f;
+  font-weight: 600;
+}
+
+.formWrapper {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 700px;
+  margin: auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.form {
+  width: 100%;
+}
+
+.label {
+  font-weight: 500;
+  color: #333;
+}
+
+.input {
+  border-radius: 8px;
+  padding: 6px 12px;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.saveButton {
+  background-color: #5cc3b3 !important;
+  border-color: #5cc3b3 !important;
+  color: white;
+}
+
+.cancelButton {
+  border-radius: 6px;
+}

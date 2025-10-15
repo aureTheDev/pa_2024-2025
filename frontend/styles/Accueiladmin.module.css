@@ -1,0 +1,86 @@
+.container {
+  background-color: #f9fbfd;
+  font-family: "Segoe UI", sans-serif;
+  padding: 30px;
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+  animation: fadeInDown 0.6s ease-out;
+}
+
+.header h1 {
+  color: #007b7f;
+  font-size: 2.5rem;
+  margin-top: 1em;
+  margin-bottom: 0.3em;
+}
+
+.tagline {
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.statsSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+
+  width: 60%;
+  margin: 40px auto;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  padding: 24px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 123, 127, 0.2);
+}
+
+.card h3 {
+  color: #007b7f;
+  margin-top: 10px;
+}
+
+.icon {
+  font-size: 2rem;
+  color: #5cc3b3;
+}
+
+.carouselSection {
+  margin: 60px 0;
+  text-align: center;
+}
+
+.aboutSection {
+  margin: 60px auto;
+  background: #e0f7f5;
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  color: #004d4d;
+  font-size: 1.1rem;
+  width: 50%;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
